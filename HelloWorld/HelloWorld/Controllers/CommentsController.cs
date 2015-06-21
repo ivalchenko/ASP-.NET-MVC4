@@ -42,9 +42,26 @@ namespace HelloWorld.Controllers
         }
 
         // POST: Comments/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         //[ValidateAntiForgeryToken]
-        public ActionResult Create(/*[Bind(Include = "CommentId, PostId, AuthorId, Description,Date,")]*/ Comment comment)
+        public ActionResult Create(/*[Bind(Include = "CommentId,Description,Date,AuthorId,PostId")]*/ Comment comment)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Comments.Add(comment);
+                db.SaveChanges();
+                //return RedirectToAction("Index");
+                return RedirectToAction("Details", "Posts", new { id = comment.PostId });
+            }
+
+            return View(comment);
+        }
+
+        /*МОЯ УЖАСНАЯ ВЕРСИЯ*/
+        /*
+        public ActionResult Create(Comment comment)
         {
             if (ModelState.IsValid)
             {
@@ -54,8 +71,9 @@ namespace HelloWorld.Controllers
                 RedirectToAction("Index", "Posts");
             }
 
-            return View("Details");
+            return View(comment);
         }
+         * */
 
         // GET: Comments/Edit/5
         public ActionResult Edit(int? id)
@@ -77,7 +95,7 @@ namespace HelloWorld.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CommentId,Description,Date,UserId")] Comment comment)
+        public ActionResult Edit([Bind(Include = "CommentId,Description,Date,AuthorId,PostId")] Comment comment)
         {
             if (ModelState.IsValid)
             {

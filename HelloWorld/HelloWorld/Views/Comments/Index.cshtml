@@ -18,7 +18,10 @@
             @Html.DisplayNameFor(model => model.Date)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.UserId)
+            @Html.DisplayNameFor(model => model.AuthorId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostId)
         </th>
         <th></th>
     </tr>
@@ -32,7 +35,10 @@
             @Html.DisplayFor(modelItem => item.Date)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.UserId)
+            @Html.DisplayFor(modelItem => item.AuthorId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostId)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.CommentId }) |

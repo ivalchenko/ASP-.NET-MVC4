@@ -14,9 +14,12 @@ namespace HelloWorld.Models
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
-        public DateTime? Date { get; set; }
+        //[DataType(DataType.Date)]
+        //[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        //public DateTime Date { get; set; }
+
+        [DataType(DataType.MultilineText)]
+        public string Date { get; set; }
 
         public int CommentId { get; set; }
         public int AuthorId { get; set; }

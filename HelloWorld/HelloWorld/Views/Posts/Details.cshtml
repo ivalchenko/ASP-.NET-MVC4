@@ -12,7 +12,6 @@
 
     <ul class="post-footer">
         <!--<time datetime="" pubdate><small>TimeTimeTime</small></time>-->
-        <li><small>@Html.DisplayFor(model => model.Post.Date)</small></li>
         <li><span id="comments"><i class="fa fa-comment"></i> 20</span></li>
         <li><span><i class="fa fa-eye"></i> 1218</span></li>
     </ul>
@@ -32,7 +31,7 @@
         Id Автора<br>
         <input type="number" name="AuthorId"> <br>
         <input type="datetime" name="Date" value="@DateTime.Now"> <br>
-        <input type="number" name="PostId" value="@Html.DisplayFor(model => model.Post.PostId)"> <br>
+        <input type="number" style="visibility:hidden"  name="PostId" value="@Html.DisplayFor(model => model.Post.PostId)"> <br>
         <input type="submit" value="Добавить">
     </form>
 
