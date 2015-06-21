@@ -93,3 +93,7 @@ input[type="submit"]:hover {
 .back-to-list-button-edit a:hover {
 	background: #55acee;
 }
+
+input[name="Date"] {
+	visibility: hidden;
+}

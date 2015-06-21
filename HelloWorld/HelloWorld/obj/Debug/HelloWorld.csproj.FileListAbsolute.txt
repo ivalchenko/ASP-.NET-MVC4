@@ -62,3 +62,6 @@ C:\Users\IliA\documents\visual studio 2013\Projects\HelloWorld\HelloWorld\obj\De
 C:\Users\IliA\documents\visual studio 2013\Projects\HelloWorld\HelloWorld\obj\Debug\HelloWorld.Migrations._201506211129.resources
 C:\Users\IliA\documents\visual studio 2013\Projects\HelloWorld\HelloWorld\obj\Debug\HelloWorld.Migrations._201506211312.resources
 C:\Users\IliA\documents\visual studio 2013\Projects\HelloWorld\HelloWorld\obj\Debug\HelloWorld.Migrations._201506211401.resources
+C:\Users\IliA\documents\visual studio 2013\Projects\HelloWorld\HelloWorld\obj\Debug\HelloWorld.Migrations._201506211532.resources
+C:\Users\IliA\documents\visual studio 2013\Projects\HelloWorld\HelloWorld\obj\Debug\HelloWorld.Migrations._201506211700.resources
+C:\Users\IliA\documents\visual studio 2013\Projects\HelloWorld\HelloWorld\obj\Debug\HelloWorld.Migrations._201506211719.resources

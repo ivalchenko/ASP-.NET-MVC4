@@ -24,12 +24,17 @@
     </ul>
 
     <h5>Комментарии</h5>
-    <form method="post" action="@Url.Action("Create", "Comment")">
-        <input type="text" name="CommentId"> <br>
+  
+
+    <form class="comment-create-form" method="post" action="@Url.Action("Create", "Comments")">
+        Описание<br>
         <input type="text" name="Description"> <br>
-        <input type="text" name="Date"> <br>
-        <input type="text" name="AuthorId"> <br>
+        Id Автора<br>
+        <input type="number" name="AuthorId"> <br>
+        <input type="datetime" name="Date" value="@DateTime.Now"> <br>
+        <input type="number" name="PostId" value="@Html.DisplayFor(model => model.Post.PostId)"> <br>
         <input type="submit" value="Добавить">
     </form>
+
 </article>
 

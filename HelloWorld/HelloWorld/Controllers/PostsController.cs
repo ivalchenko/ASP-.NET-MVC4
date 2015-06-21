@@ -28,13 +28,17 @@ namespace HelloWorld.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Post post = db.Posts.Find(id);
+            int postId = (int)id;
+            //Post post = db.Posts.Find(id);
+            PostComment postComment = new PostComment();
+            postComment.Post = db.Posts.Find(id);
+            postComment.Comments = db.Comments.Where(s => s.PostId==postId).ToList();
 
-            if (post == null)
+            if (postComment == null)
             {
                 return HttpNotFound();
             }
-            return View(post);
+            return View(postComment);
         }
 
         // GET: Posts/Create
@@ -52,7 +56,6 @@ namespace HelloWorld.Controllers
         {
             if (ModelState.IsValid)
             {
-                //post.Date = new DateTime().ToString;
                 db.Posts.Add(post);
                 db.SaveChanges();
                 return RedirectToAction("Index");

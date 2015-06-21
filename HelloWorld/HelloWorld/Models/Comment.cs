@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.ComponentModel.DataAnnotations;
+using System; 
 
 namespace HelloWorld.Models
 {
@@ -13,9 +14,9 @@ namespace HelloWorld.Models
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
-        [Required]
-        [DataType(DataType.DateTime)]
-        public string Date { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime? Date { get; set; }
 
         public int CommentId { get; set; }
         public int AuthorId { get; set; }

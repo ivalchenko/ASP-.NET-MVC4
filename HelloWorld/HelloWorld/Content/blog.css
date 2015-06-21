@@ -75,3 +75,10 @@ src: url('../font/a_Monumento_DemiBold_EOT.eot');
 	margin-left: -1em;
 	margin-bottom: -1.5em;
 }
+
+/*Инпуты для формы добавления комментария*/
+
+.comment-create-form input[name="Date"] {
+	visibility: hidden;
+}
+

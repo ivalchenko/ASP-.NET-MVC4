@@ -34,11 +34,6 @@
             </div>
         </div>
 
-        <div class="post-date-form">
-            @Html.EditorFor(model => model.Date, new DateTime())
-            @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
-        </div>
-
         <div class="post-create-button">
            <input type="submit" value="Создать">
         </div>
@@ -48,8 +43,6 @@
         </div>
     </div>
 }
-
-
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

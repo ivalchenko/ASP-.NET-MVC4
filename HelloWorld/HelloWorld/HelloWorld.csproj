@@ -198,6 +198,18 @@
     <Compile Include="Migrations\201506211101475_2015-06-21-14-01.Designer.cs">
       <DependentUpon>201506211101475_2015-06-21-14-01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506211232235_2015-06-21-15-32.cs" />
+    <Compile Include="Migrations\201506211232235_2015-06-21-15-32.Designer.cs">
+      <DependentUpon>201506211232235_2015-06-21-15-32.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506211400177_2015-06-21-17-00.cs" />
+    <Compile Include="Migrations\201506211400177_2015-06-21-17-00.Designer.cs">
+      <DependentUpon>201506211400177_2015-06-21-17-00.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506211420152_2015-06-21-17-19.cs" />
+    <Compile Include="Migrations\201506211420152_2015-06-21-17-19.Designer.cs">
+      <DependentUpon>201506211420152_2015-06-21-17-19.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comment.cs" />
@@ -266,7 +278,6 @@
     <Content Include="Views\Posts\Details.cshtml" />
     <Content Include="Views\Posts\Edit.cshtml" />
     <Content Include="Views\Posts\Index.cshtml" />
-    <Content Include="Views\Comments\Create.cshtml" />
     <Content Include="Views\Comments\Delete.cshtml" />
     <Content Include="Views\Comments\Details.cshtml" />
     <Content Include="Views\Comments\Edit.cshtml" />
@@ -308,6 +319,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506211101475_2015-06-21-14-01.resx">
       <DependentUpon>201506211101475_2015-06-21-14-01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506211232235_2015-06-21-15-32.resx">
+      <DependentUpon>201506211232235_2015-06-21-15-32.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506211400177_2015-06-21-17-00.resx">
+      <DependentUpon>201506211400177_2015-06-21-17-00.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506211420152_2015-06-21-17-19.resx">
+      <DependentUpon>201506211420152_2015-06-21-17-19.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

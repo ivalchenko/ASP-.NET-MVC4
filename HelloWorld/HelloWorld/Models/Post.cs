@@ -18,9 +18,9 @@ namespace HelloWorld.Models
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
-        [Required]
+        /*[Required]
         [DataType(DataType.DateTime)]
-        public string Date { get; set; }
+        public string Date { get; set; */
 
         public int PostId { get; set; }
     }
@@ -48,8 +48,8 @@ namespace HelloWorld.Models
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
-        [Required]
+        /*[Required]
         [DataType(DataType.DateTime)]
-        public string Date { get; set; }
+        public string Date { get; set; }*/
     }
 }
