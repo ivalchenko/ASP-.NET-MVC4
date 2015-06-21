@@ -18,7 +18,8 @@ namespace HelloWorld.Models
         [Required]
         //[DataType(DataType.)]
         //public Comment Comment { get; set; }
-        public List<Comment> Comments {get; set;}
+        //public List<Comment> Comments {get; set;}
+        public IEnumerable<Comment> Comments { get; set; }
 
         public int PostCommentId { get; set; }
     }

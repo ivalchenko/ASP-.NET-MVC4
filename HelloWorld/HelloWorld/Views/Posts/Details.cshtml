@@ -23,7 +23,12 @@
     </ul>
 
     <h5>Комментарии</h5>
-  
+
+@foreach (var item in Model.Comments)
+{
+    @Html.DisplayFor(modelItem => item.Description)<br>
+}
+
 
     <form class="comment-create-form" method="post" action="@Url.Action("Create", "Comments")">
         Описание<br>

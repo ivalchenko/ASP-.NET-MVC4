@@ -32,7 +32,7 @@ namespace HelloWorld.Controllers
             //Post post = db.Posts.Find(id);
             PostComment postComment = new PostComment();
             postComment.Post = db.Posts.Find(id);
-            postComment.Comments = db.Comments.Where(s => s.PostId==postId).ToList();
+            postComment.Comments = db.Comments.Where(s => s.PostId==postId);
 
             if (postComment == null)
             {
