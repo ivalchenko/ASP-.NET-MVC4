@@ -1,0 +1,35 @@
+﻿@model HelloWorld.Models.PostComment
+@{
+    ViewBag.Title = @Html.DisplayFor(model => model.Post.Title);
+}
+
+<link rel="stylesheet" href="../../../Content/blog.css">
+
+<article class="post">
+    <h3>@Html.DisplayFor(model => model.Post.Title)</h3>
+
+    <p>@Html.DisplayFor(model => model.Post.Description)</p>
+
+    <ul class="post-footer">
+        <!--<time datetime="" pubdate><small>TimeTimeTime</small></time>-->
+        <li><small>@Html.DisplayFor(model => model.Post.Date)</small></li>
+        <li><span id="comments"><i class="fa fa-comment"></i> 20</span></li>
+        <li><span><i class="fa fa-eye"></i> 1218</span></li>
+    </ul>
+
+    <ul class="post-control-panel">
+        <li>@Html.ActionLink("Назад", "Index")</li>
+        <li>@Html.ActionLink("Редактировать", "Edit", new { id = Model.Post.PostId })</li>
+        <li>@Html.ActionLink("Удалить", "Delete", new { id = Model.Post.PostId })</li>
+    </ul>
+
+    <h5>Комментарии</h5>
+    <form method="post" action="@Url.Action("Create", "Comment")">
+        <input type="text" name="CommentId"> <br>
+        <input type="text" name="Description"> <br>
+        <input type="text" name="Date"> <br>
+        <input type="text" name="AuthorId"> <br>
+        <input type="submit" value="Добавить">
+    </form>
+</article>
+

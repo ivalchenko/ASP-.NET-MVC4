@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Контакты";
+}
+
+<link rel="stylesheet" href="../../../Content/contacts.css">
+
+<div id="precontacts">
+    <h2>Здесь вы можете связаться со мной.</h2>
+    <p>Я постараюсь ответить на ваш вопрос при первой же возможности.</p>
+</div>
+
+<div id="contacts">
+    <p>Моб. телефон: <strong>+375 (029) 789-80-19</strong></p>
+
+    <p>Эл. почта: <strong>i.valchenk@hotmail.com</strong></p>
+
+    <p>Skype: <strong>ilia.valchenko</strong></p>
+
+    <p>GitHub: <a href="https://github.com/ivalchenko" title="Профиль GitHub" target="_blank"><strong>ivalchenko</strong></a></p>
+
+    <p>ВКонтакте: <a href="http://vk.com/ivalchenko" title="Страница ВКонтакте" target="_blank"><strong>Вальченко Илья</strong></a></p>
+
+    <form action="php/send-mail.php" method="POST">
+
+        <fieldset>
+
+            <p><label for="name">Имя</label></p>
+            <p><input type="text" id="name" name="name" placeholder="Введите имя" pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$"></p>
+
+            <p><label for="email">E-mail</label></p>
+            <p><input type="email" id="email" name="mail" placeholder="mail@address.com"></p>
+
+            <p><textarea cols="80" rows="15" class="message_textarea" name="text" placeholder="Сообщение..."></textarea></p>
+            <p><input type="submit" value="Отправить" name="button"></p>
+
+        </fieldset>
+
+    </form>
+
+</div>

@@ -1,0 +1,77 @@
+@font-face {
+font-family:'a_Monumento_DemiBold_ttf';
+src: url('../font/a_Monumento_DemiBold.ttf');
+}
+
+@font-face {
+font-family:'a_Monumento_DemiBold_eot';
+src: url('../font/a_Monumento_DemiBold_EOT.eot');
+}
+
+.post a {
+	color: #0084b4;
+	text-decoration: underline;
+}
+
+.post a:hover {
+	color: #55acee;
+}
+
+.post {
+	padding: 1em;
+	/*background-color: yellow;*/
+}
+
+.post h3 {
+	text-align: left;
+	font-size: 1.3em;
+}
+
+.post p{
+	padding: 0;
+	margin: 0.4em 0 0 -2em;
+}
+
+.post-footer {
+	color: #636363;
+	list-style-type: none;
+	margin: -1em 0 0 -0.5em;
+}
+
+.post-footer li {
+	display: inline-block;
+	margin-left: 0.5em;
+}
+
+.post-control-panel {
+	list-style-type: none;
+	margin-top: 0.5em;
+}
+
+.post-control-panel li {
+	display: inline-block;
+	margin-right: 0.5em;
+}
+
+.post-control-panel li a {
+	text-decoration: none;
+	background: #0084b4;
+	color: #fff;
+	display: block;
+	padding: 4px 10px;
+	margin-top: 1.5%;
+}
+
+.post-control-panel li a:hover {
+	color: #fff;
+	background: #55acee;
+}
+
+.post-create-button a  {
+	display: block;
+	background: url(img/create.png) no-repeat;
+	background-size: 3.5%;
+	padding: 0.5em 0 0.8em 2.8em;
+	margin-left: -1em;
+	margin-bottom: -1.5em;
+}
