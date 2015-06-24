@@ -164,6 +164,12 @@ input[type="submit"]:hover {
 	text-decoration: underline;
 }
 
+/*Лайки*/
+
+.like:hover {
+	color: #de3636;
+}
+
 
 
 

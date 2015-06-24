@@ -36,6 +36,10 @@ namespace HelloWorld.Controllers
             
             ViewBag.CurrentUserId = User.Identity.GetUserId();
 
+            if (postComment.Post.Tags != null && postComment.Post.Tags.Count > 0)
+                ViewBag.Tags = postComment.Post.Tags.ToList();
+            ViewBag.Tags = null;
+
             if (postComment == null)
             {
                 return HttpNotFound();
@@ -100,6 +104,14 @@ namespace HelloWorld.Controllers
             }
 
             return View("Index", Posts);
+        }
+        
+        //POST Like
+        [HttpPost]
+        public void AJAXLike(int postId)
+        {
+            db.Posts.Find(postId).LikesNumber += 1;
+            db.SaveChanges();
         }
 
         // GET: Posts/Edit/5

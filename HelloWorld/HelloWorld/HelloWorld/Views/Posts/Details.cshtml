@@ -11,6 +11,16 @@
 
     <p>@Html.DisplayFor(model => model.Post.Description)</p>
 
+   @if (ViewBag.Tags != null && ViewBag.Tags.Count > 0)
+   {
+    <ul class="tags">
+        @foreach (var tag in Model.Post.Tags/*ViewBag.Tags*/)
+        {
+            <li>@Html.ActionLink("#" + tag.TagName, "ByTag", new { tagName = tag.TagName })</li>
+        }
+    </ul>
+   }
+
     <ul class="post-footer">
         <li><small>@Html.DisplayFor(model => model.Post.PostDate)</small></li>
         <li><span id="comments"><i class="fa fa-comment"></i> @Html.DisplayFor(model => model.Post.CommentsNumber)</span></li>
@@ -32,7 +42,7 @@
     @if (Request.IsAuthenticated)
     {
         <form class="comment-create-form" method="post" action="@Url.Action("Create", "Comments")">
-            <textarea rows="5" cols="60" name="Description"></textarea> <br>
+            <textarea rows="5" cols="60" name="Description" required></textarea> <br>
             <input type="submit" value="Добавить">
             <input type="number" style="visibility:hidden" name="PostId" value="@Html.DisplayFor(model => model.Post.PostId)"> <br>
         </form>

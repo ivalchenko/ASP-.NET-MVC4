@@ -376,6 +376,10 @@
     <Compile Include="Migrations\201506240644272_2015-06-24-09-44.Designer.cs">
       <DependentUpon>201506240644272_2015-06-24-09-44.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506240657194_2015-06-24-09-57.cs" />
+    <Compile Include="Migrations\201506240657194_2015-06-24-09-57.Designer.cs">
+      <DependentUpon>201506240657194_2015-06-24-09-57.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comment.cs" />
@@ -383,7 +387,6 @@
     <Compile Include="Models\Image.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Post.cs" />
-    <Compile Include="Models\PostComment.cs" />
     <Compile Include="Models\Tag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -608,6 +611,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506240644272_2015-06-24-09-44.resx">
       <DependentUpon>201506240644272_2015-06-24-09-44.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506240657194_2015-06-24-09-57.resx">
+      <DependentUpon>201506240657194_2015-06-24-09-57.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

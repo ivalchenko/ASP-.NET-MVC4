@@ -180,3 +180,4 @@ C:\Users\IliA\Documents\Visual Studio 2013\Projects\HelloWorld\HelloWorld\HelloW
 C:\Users\IliA\Documents\Visual Studio 2013\Projects\HelloWorld\HelloWorld\HelloWorld\obj\Debug\HelloWorld.Migrations._20150624.resources
 C:\Users\IliA\Documents\Visual Studio 2013\Projects\HelloWorld\HelloWorld\HelloWorld\obj\Debug\HelloWorld.Migrations._201506240926.resources
 C:\Users\IliA\Documents\Visual Studio 2013\Projects\HelloWorld\HelloWorld\HelloWorld\obj\Debug\HelloWorld.Migrations._201506240944.resources
+C:\Users\IliA\Documents\Visual Studio 2013\Projects\HelloWorld\HelloWorld\HelloWorld\obj\Debug\HelloWorld.Migrations._201506240957.resources
