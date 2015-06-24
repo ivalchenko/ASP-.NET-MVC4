@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="../../../Content/img/icon/BatkaBatmen.png" type="image/png">
+
+    <meta charset="utf-8">
+    <title>@ViewBag.Title | Вальченко блог</title>
+
+    <link rel="stylesheet" href="../../../Content/css/new_elements.css">
+    <link rel="stylesheet" href="../../../Content/css/style.css">
+    <link rel="stylesheet" href="../../../Content/css/home.css">
+</head>
+
+<body>
+    <div id="header_container">
+        <header>
+            <div id="logo_container">
+                <a href="index.html">
+                    <img src="../../../Content/img/logo/batman_from_gomel.png" alt="valchenko_uphero_dot_com_logo">
+                </a>
+            </div>
+
+            <nav id="responsive_nav">
+                <ul>
+                    <li><span><a>@Html.ActionLink("ГЛАВНАЯ", "Index", "Home")</a></span></li>
+                    <!--<img src="../../../Content/img/domikBW.png" alt="black_and_white_home_logo">-->
+                    <li><span><a>@Html.ActionLink("ОБО МНЕ", "About", "Home")</a></span></li>
+                    <li><span><a>@Html.ActionLink("КОНТАКТЫ", "Contact", "Home")</a></span></li>
+                    <li><span><a>@Html.ActionLink("БЛОГ", "Index", "Posts")</a></span></li>
+                    <li><span><a>@Html.ActionLink("АРТ", "Art", "Images")</a></span></li>
+
+                    <li><span><a href="rotonda.html">РАЗРАБОТКА САЙТОВ</a></span></li>
+                    <li><span><a href="portfolio.html">ПОРТФОЛИО</a></span></li>
+                    <li><span><a href="contacts.html">КОНТАКТЫ</a></span></li>
+
+                    
+                    <li><span><a href="photo.php">ФОТО</a></span></li>
+                </ul>
+            </nav>
+        </header>
+
+        <footer id="responsive_footer">
+            <p><small>&copy; @DateTime.Now.Year</small></p>
+
+            <p>
+                <small>
+                    <a href="http://vk.com/ivalchenko" title="Страница ВКонтакте" target="_blank">Вальченко Илья</a>
+                </small>
+            </p>
+        </footer>
+    </div>
+
+    <article id="content_container">
+        @RenderBody()
+    </article>
+
+    <div class="header-slogan">
+        <h1 id="responsive_h1">Этому блогу нужен свой супергерой!</h1>
+        @Html.Partial("_LoginPartial")
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+
+    <script>
+  			$("#responsive_nav").fitText(1.8);
+  			$("#responsive_h1").fitText(4.0);
+  			$("#responsive_footer").fitText(1.8);
+    </script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+

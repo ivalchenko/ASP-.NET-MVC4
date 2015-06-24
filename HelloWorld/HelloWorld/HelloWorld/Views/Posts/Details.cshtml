@@ -1,0 +1,61 @@
+﻿@model HelloWorld.Models.PostComment
+@{
+    ViewBag.Title = @Html.DisplayFor(model => model.Post.Title);
+}
+
+<link rel="stylesheet" href="../../../Content/css/blog.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+<article class="post">
+    <h3>@Html.DisplayFor(model => model.Post.Title)</h3>
+
+    <p>@Html.DisplayFor(model => model.Post.Description)</p>
+
+    <ul class="post-footer">
+        <li><small>@Html.DisplayFor(model => model.Post.PostDate)</small></li>
+        <li><span id="comments"><i class="fa fa-comment"></i> @Html.DisplayFor(model => model.Post.CommentsNumber)</span></li>
+        <li><span><i class="fa fa-heart"></i> @Html.DisplayFor(model => model.Post.LikesNumber)</span></li>
+    </ul>
+
+    <ul class="post-control-panel">
+        <li>@Html.ActionLink("Назад", "Index")</li>
+
+        @if (Request.IsAuthenticated && User.Identity.Name=="i.valchenk@hotmail.com")
+        {
+            <li>@Html.ActionLink("Редактировать", "Edit", new { id = Model.Post.PostId })</li>
+            <li>@Html.ActionLink("Удалить", "Delete", new { id = Model.Post.PostId })</li>
+        }
+    </ul>
+
+    <h5>Комментарии</h5>
+
+    @if (Request.IsAuthenticated)
+    {
+        <form class="comment-create-form" method="post" action="@Url.Action("Create", "Comments")">
+            <textarea rows="5" cols="60" name="Description"></textarea> <br>
+            <input type="submit" value="Добавить">
+            <input type="number" style="visibility:hidden" name="PostId" value="@Html.DisplayFor(model => model.Post.PostId)"> <br>
+        </form>
+    }
+    
+    @foreach (var item in Model.Comments)
+    {
+        <div class="comment">
+            <div>
+                <img src="~/Content/img/avatars/default.png">
+            </div>
+
+            <div>
+                <p><strong>@Html.DisplayFor(modelItem => item.AuthorId)</strong><span>@Html.DisplayFor(modelItem => item.CommentDate)</span></p>
+                <p>@Html.DisplayFor(modelItem => item.Description)</p>
+                
+                @if (Request.IsAuthenticated && (item.AuthorId == ViewBag.CurrentUserId || User.Identity.Name == "i.valchenk@hotmail.com"))
+                {
+                    <form method="post" action="@Url.Action("Delete", "Comments", new { id = item.CommentId})">
+                        <input type="submit" value="Удалить">
+                    </form>
+                }
+            </div>
+        </div>
+    }
+</article>
