@@ -18,9 +18,12 @@
             alert("Пошел AJAX!");
 
               $.ajax({
-                    url: "/Posts/AJAXLike",
-                    method: 'POST',
-                    data: {"postId" : postId}
+                    type: "POST",
+                    url: '@Url.Action("AJAXLike", "Posts")',
+                    data: { 'postId' : postId},
+                    success: function () {
+                    alert('Done!');
+                    }
                 });
         }
     } 
