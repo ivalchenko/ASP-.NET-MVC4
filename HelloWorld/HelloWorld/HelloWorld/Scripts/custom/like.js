@@ -1,3 +1,0 @@
-Like: function () {
-    alert("Like!");
-}
