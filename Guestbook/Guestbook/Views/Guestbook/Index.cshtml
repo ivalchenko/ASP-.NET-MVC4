@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "List";
+}
+
+<h2>My Guestbook Entries</h2>
+
+<p>
+    <a href="/Guestbook/Create">Add a new entry</a>
+</p>
+
+@foreach (var entry in ViewBag.Entries)
+{
+    <section class="contact">
+        <header>
+            <h3>@entry.PostText</h3>
+        </header>
+        <p>
+            Posted by @entry.UserName on @entry.PostDate.ToLongDateString()
+        </p>
+
+        @if(User.Identity.Name == entry.UserName)
+        { 
+            <div>
+                @Html.ActionLink("Edit", "Show", new { id = entry.Id })
+            </div>
+        }
+    </section>
+}

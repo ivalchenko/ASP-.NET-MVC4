@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Show";
+}
+
+<h2>Show</h2>
+
+<article>
+    <p><strong>Message:</strong> @Model.PostText</p>
+    <p><strong>Posted by</strong> @Model.UserName on @Model.PostDate</p>
+    <p>@Html.ActionLink("Back to list", "Index")</p>
+</article>
